@@ -1,0 +1,19 @@
+@mixin resp ($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+
+
+// common style 
+body {
+    background-color: black;
+}
+
+
+
+// header customization 
+header {
+
+}
