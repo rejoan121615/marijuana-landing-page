@@ -1,10 +1,16 @@
-@mixin resp ($width) {
+@mixin resp($width) {
     @media only screen and (min-width: $width) {
         @content;
     }
 }
 
-// responsive break points 
+// fonts
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url("../fonts/Montserrat/Montserrat-Black.ttf");
+}
+
+// responsive break points
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
@@ -12,42 +18,74 @@ $xl: 1200px;
 $xxl: 1400px;
 $mxl: 1800px;
 
-
-// common style 
+// common style
 body {
-    background-color: #00060D;
+    background-color: #00060d;
 }
 
-
-
-// header customization 
+// header customization
 header {
     .container {
-        // brand 
+        // brand
         .brand {
             #brand__svg {
-                width: 50px;   
-                @include resp ($lg) {
+                width: 50px;
+                @include resp($lg) {
                     width: 75px;
                 }
             }
         }
-        // text column 
+        // text column
         .texts {
             h6 {
                 font-size: 0.8rem;
                 font-weight: 400;
-                // responsive 
-                @include resp ($lg) {
+                // responsive
+                @include resp($lg) {
                     font-size: 1rem;
                 }
-                .text-danger, .text-white {
+                .text-danger,
+                .text-white {
                     font-weight: 700;
                 }
                 .text-ash {
-                    color: #9C9C9C;
+                    color: #9c9c9c;
                 }
             }
+        }
+    }
+}
+
+// main section wrapper ------------
+#main__wrapper {
+}
+
+// main section
+#main {
+    .texts {
+        // margin-top: 45px;
+        h1 {
+            font-family: Montserrat-Black;
+            font-style: normal;
+            font-size: calc(28px + (45 - 28) * ((100vw - 300px) / (600 - 300)));
+            line-height: 100%;
+            // first child
+            &:first-child {
+                transform: translateX(-8%);
+            }
+            // last child
+            &:last-child {
+                transform: translateX(8%);
+            }
+        }
+    }
+    // images
+    .images {
+        margin-top: 80px;
+        text-align: right;
+        img {
+            width: 40px;
+            transform: translateX(-8vw);
         }
     }
 }

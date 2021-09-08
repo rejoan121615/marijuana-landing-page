@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("../fonts/Montserrat/Montserrat-Black.ttf");
+}
 body {
-  background-color: #00060D;
+  background-color: #00060d;
 }
 
 header .container .brand #brand__svg {
@@ -19,11 +23,33 @@ header .container .texts h6 {
     font-size: 1rem;
   }
 }
-header .container .texts h6 .text-danger, header .container .texts h6 .text-white {
+header .container .texts h6 .text-danger,
+header .container .texts h6 .text-white {
   font-weight: 700;
 }
 header .container .texts h6 .text-ash {
-  color: #9C9C9C;
+  color: #9c9c9c;
+}
+
+#main .texts h1 {
+  font-family: Montserrat-Black;
+  font-style: normal;
+  font-size: calc(28px + (45 - 28) * ((100vw - 300px) / (600 - 300)));
+  line-height: 100%;
+}
+#main .texts h1:first-child {
+  transform: translateX(-8%);
+}
+#main .texts h1:last-child {
+  transform: translateX(8%);
+}
+#main .images {
+  margin-top: 80px;
+  text-align: right;
+}
+#main .images img {
+  width: 40px;
+  transform: translateX(-8vw);
 }
 
 /*# sourceMappingURL=style.css.map */
