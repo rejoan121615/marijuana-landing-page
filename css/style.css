@@ -1,3 +1,29 @@
+body {
+  background-color: #00060D;
+}
 
+header .container .brand #brand__svg {
+  width: 50px;
+}
+@media only screen and (min-width: 992px) {
+  header .container .brand #brand__svg {
+    width: 75px;
+  }
+}
+header .container .texts h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 992px) {
+  header .container .texts h6 {
+    font-size: 1rem;
+  }
+}
+header .container .texts h6 .text-danger, header .container .texts h6 .text-white {
+  font-weight: 700;
+}
+header .container .texts h6 .text-ash {
+  color: #9C9C9C;
+}
 
 /*# sourceMappingURL=style.css.map */

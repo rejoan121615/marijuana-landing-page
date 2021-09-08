@@ -4,16 +4,50 @@
     }
 }
 
+// responsive break points 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$mxl: 1800px;
 
 
 // common style 
 body {
-    background-color: black;
+    background-color: #00060D;
 }
 
 
 
 // header customization 
 header {
-
+    .container {
+        // brand 
+        .brand {
+            #brand__svg {
+                width: 50px;   
+                @include resp ($lg) {
+                    width: 75px;
+                }
+            }
+        }
+        // text column 
+        .texts {
+            h6 {
+                font-size: 0.8rem;
+                font-weight: 400;
+                // responsive 
+                @include resp ($lg) {
+                    font-size: 1rem;
+                }
+                .text-danger, .text-white {
+                    font-weight: 700;
+                }
+                .text-ash {
+                    color: #9C9C9C;
+                }
+            }
+        }
+    }
 }
