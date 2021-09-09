@@ -35,7 +35,7 @@ $mxl: 1800px;
 .container {
     padding-top: 100px;
     padding-bottom: 100px;
-    @include resp (400px) {
+    @include resp(400px) {
         padding-top: 150px;
         padding-bottom: 150px;
     }
@@ -43,13 +43,14 @@ $mxl: 1800px;
         padding-top: 185px;
         padding-bottom: 180px;
     }
-    @include resp ($md) {
+    @include resp($md) {
         padding-top: 150px;
         padding-bottom: 150px;
     }
 }
 body {
     background-color: #00060d;
+    overflow-x: hidden;
 }
 
 h2.tittle {
@@ -68,29 +69,29 @@ p.para {
     z-index: 1000;
     font-size: 18px;
     max-width: 420px;
-    @include resp ($sm) {
+    @include resp($sm) {
         font-size: 20px;
         // line-height: 32px;
         line-height: 150%;
         max-width: initial;
     }
-    @include resp ($md) {
+    @include resp($md) {
         font-size: 22px;
         line-height: 175%;
         // line-height: 35px;
     }
-    @include resp ($lg) {
+    @include resp($lg) {
         font-size: 25px;
         // line-height: 38px;
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         font-size: 28px;
         // line-height: 40px;
     }
-    @include resp ($xxl) {
+    @include resp($xxl) {
         font-size: 31px;
     }
-    @include resp ($mxl) {
+    @include resp($mxl) {
         font-size: 35px;
     }
 }
@@ -106,8 +107,8 @@ header {
     }
     .container {
         // brand
-        padding-top: 20px!important;
-        padding-bottom: 20px!important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
         .brand {
             #brand__svg {
                 width: 75px;
@@ -270,17 +271,17 @@ header {
         }
     }
 }
-// who are section 
+// who are section
 #who__we__are {
     .container {
         .col-12 {
-            // image 
+            // image
             img {
                 width: 120px;
-                @include resp (400px) {
+                @include resp(400px) {
                     width: 150px;
                 }
-                @include resp ($sm) {
+                @include resp($sm) {
                     width: 175px;
                 }
                 @include resp($md) {
@@ -292,20 +293,20 @@ header {
                 @include resp($xl) {
                     width: 310px;
                 }
-                @include resp ($xxl) {
+                @include resp($xxl) {
                     width: 330px;
                 }
             }
-            // heading 
+            // heading
             h2 {
-                @include resp ($lg) {
-                    text-align: left!important;
+                @include resp($lg) {
+                    text-align: left !important;
                 }
             }
-            // paragraph 
+            // paragraph
             p.para {
                 @include resp($lg) {
-                    text-align: left!important;
+                    text-align: left !important;
                     font-size: 33px;
                     margin-top: 30px;
                 }
@@ -314,7 +315,7 @@ header {
     }
 }
 
-// some tittle here section 
+// some tittle here section
 #some__tittle__here {
     .container {
         @media screen and (max-width: 500px) {
@@ -325,7 +326,7 @@ header {
             margin: 0;
             padding: 0;
             margin-top: 50px;
-            @include resp ($lg) {
+            @include resp($lg) {
                 margin-top: 65px;
             }
             li {
@@ -333,33 +334,33 @@ header {
                 @include resp($xl) {
                     margin-bottom: 45px;
                 }
-                // images 
+                // images
                 .img {
                     img {
                         border-radius: 50%;
                         width: 135px;
-                        @include resp ($lg) {
+                        @include resp($lg) {
                             width: 160px;
                         }
-                        @include resp ($xl) {
+                        @include resp($xl) {
                             width: 170px;
                         }
                     }
                 }
-                // paragraph section 
+                // paragraph section
                 p.para {
                     // max-width: 370px;
-                    @include resp ($md) {
-                        text-align: left!important;
+                    @include resp($md) {
+                        text-align: left !important;
                     }
-                    @include resp ($lg) {
-                        margin-left: 55px!important;
+                    @include resp($lg) {
+                        margin-left: 55px !important;
                     }
-                    @include resp ($xl) {
-                        margin-left: 65px!important;
+                    @include resp($xl) {
+                        margin-left: 65px !important;
                     }
-                    @include resp ($xxl) {
-                        margin-left: 75px!important;
+                    @include resp($xxl) {
+                        margin-left: 75px !important;
                     }
                 }
             }
@@ -367,11 +368,111 @@ header {
     }
 }
 
-
-// middle flower section ------------- 
-.middle__flower {
-    text-align: right;
-    img {
-        // width: 75px;
+// middle flower section -------------
+#main__slider {
+    .container {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .splide {
+        .splide__list {
+            display: flex;
+            justify-content: space-between;
+        }
+        // splide slide
+        .splide__slide {
+            margin-right: 5px;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            @media screen and (min-width: 420px) {
+                height: 200px;
+            }
+            @include resp($md) {
+                height: 250px;
+            }
+            @include resp($lg) {
+                height: 300px;
+            }
+            @include resp ($xl) {
+                height: 400px;
+            }
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 5%;
+                transition: all 0.5s;
+                transform: scale(0.9);
+                @media screen and (min-width: 420px) {
+                    width: 120px;
+                    height: 120px;
+                }
+                @include resp($md) {
+                    width: 150px;
+                    height: 150px;
+                }
+                @include resp ($xl) {
+                    width: 190px;
+                    height: 190px;
+                }
+            }
+        }
+        // active class style
+        .is-active {
+            img {
+                transform: scale(1.3);
+                // transform: scale(1.2);
+                @include resp($md) {
+                    transform: scale(1.5);
+                }
+                @include resp($lg) {
+                    transform: scale(1.8);
+                }
+            }
+        }
+        // splide tract
+        .splide__track {
+            // overflow-y: visible;
+        }
+        // arrow btn
+        .splide__arrows {
+            display: none;
+            @include resp($lg) {
+                display: block;
+            }
+            .splide__arrow {
+                background-color: #4a4a4a !important;
+                transform: scale(1.2);
+                width: 40px;
+                height: 40px;
+                path {
+                    stroke: white;
+                    fill: white;
+                }
+                @include resp ($xl) {
+                    margin-left: -20px;
+                    width: 45px;
+                    height: 45px;
+                }
+                &:last-child {
+                    margin-right: -20px;
+                }
+            }
+        }
+        // pagination
+        .splide__pagination {
+            // transform: translateY(35px);
+            @media screen and (min-width: 420px) {
+                margin-bottom: -20px;
+            }
+            @include resp($sm) {
+                margin-bottom: -35px;
+            }
+            @include resp ($lg) {
+                display: none;
+            }
+        }
     }
 }
