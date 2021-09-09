@@ -92,7 +92,6 @@ p.para {
     }
     @include resp ($mxl) {
         font-size: 35px;
-        
     }
 }
 
@@ -327,6 +326,10 @@ header {
                 margin-top: 65px;
             }
             li {
+                margin-bottom: 30px;
+                @include resp($xl) {
+                    margin-bottom: 45px;
+                }
                 // images 
                 .img {
                     img {
@@ -336,7 +339,7 @@ header {
                             width: 160px;
                         }
                         @include resp ($xl) {
-                            width: 185px;
+                            width: 170px;
                         }
                     }
                 }

@@ -330,6 +330,14 @@ header .container .texts h6 .text-ash {
     margin-top: 65px;
   }
 }
+#some__tittle__here .container .list__item li {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  #some__tittle__here .container .list__item li {
+    margin-bottom: 45px;
+  }
+}
 #some__tittle__here .container .list__item li .img img {
   border-radius: 50%;
   width: 135px;
@@ -341,7 +349,7 @@ header .container .texts h6 .text-ash {
 }
 @media only screen and (min-width: 1200px) {
   #some__tittle__here .container .list__item li .img img {
-    width: 185px;
+    width: 170px;
   }
 }
 @media only screen and (min-width: 768px) {
