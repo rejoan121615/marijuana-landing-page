@@ -72,6 +72,7 @@ p.para {
         font-size: 20px;
         // line-height: 32px;
         line-height: 150%;
+        max-width: initial;
     }
     @include resp ($md) {
         font-size: 22px;
@@ -106,8 +107,8 @@ header {
     }
     .container {
         // brand
-        margin-top: 0px;
-        margin-bottom: 0px;
+        padding-top: 20px!important;
+        padding-bottom: 20px!important;
         .brand {
             #brand__svg {
                 width: 75px;
