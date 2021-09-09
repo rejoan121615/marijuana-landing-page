@@ -496,3 +496,41 @@ header {
         }
     }
 }
+// option brand logo section ----------- 
+#brand__logo {
+    .container {
+        padding-top: 0px;
+        .brand {
+            // svg wrapper 
+            .svg__wrapper {
+                svg {
+                    width: 160px;
+                    @include resp ($sm) {
+                        width: 200px;
+                    }
+                    @include resp ($md) {
+                        width: 240px;
+                    }
+                    @include resp ($lg) {
+                        width: 275px;
+                    }
+                    @include resp ($xl) {
+                        width: 300px;
+                    }
+                    @include resp ($xxl) {
+                        width: 340px;
+                    }
+                    @include resp ($mxl) {
+                        width: 400px;
+                    }
+                }
+            }
+            // texts 
+            .text__wrap {
+                p.para {
+                    max-width: initial;
+                }
+            }
+        }
+    }
+}

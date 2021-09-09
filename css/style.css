@@ -532,4 +532,44 @@ header .container .texts h6 .text-ash {
   }
 }
 
+#brand__logo .container {
+  padding-top: 0px;
+}
+#brand__logo .container .brand .svg__wrapper svg {
+  width: 160px;
+}
+@media only screen and (min-width: 576px) {
+  #brand__logo .container .brand .svg__wrapper svg {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #brand__logo .container .brand .svg__wrapper svg {
+    width: 240px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #brand__logo .container .brand .svg__wrapper svg {
+    width: 275px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #brand__logo .container .brand .svg__wrapper svg {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #brand__logo .container .brand .svg__wrapper svg {
+    width: 340px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  #brand__logo .container .brand .svg__wrapper svg {
+    width: 400px;
+  }
+}
+#brand__logo .container .brand .text__wrap p.para {
+  max-width: initial;
+}
+
 /*# sourceMappingURL=style.css.map */
