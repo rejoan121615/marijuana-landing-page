@@ -9,6 +9,19 @@
     font-family: "Montserrat-Black";
     src: url("../fonts/Montserrat/Montserrat-Black.ttf");
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap");
+
+$mont: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+body {
+    font-family: $roboto;
+}
+
+@for $a from 1 to 7 {
+    h#{$a} {
+        font-family: $mont;
+    }
+}
 
 // responsive break points
 $sm: 576px;
@@ -19,19 +32,93 @@ $xxl: 1400px;
 $mxl: 1800px;
 
 // common style
+.container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include resp (400px) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    @include resp($sm) {
+        padding-top: 185px;
+        padding-bottom: 180px;
+    }
+    @include resp ($md) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
 body {
     background-color: #00060d;
 }
 
+h2.tittle {
+    font-weight: 800;
+    font-size: calc(22px + (85 - 22) * ((100vw - 300px) / (1600 - 300)));
+    position: relative;
+    z-index: 1000;
+    @include resp($xxl) {
+        font-size: 85px;
+    }
+}
+
+p.para {
+    font-weight: 400;
+    position: relative;
+    z-index: 1000;
+    font-size: 18px;
+    max-width: 420px;
+    @include resp ($sm) {
+        font-size: 20px;
+        // line-height: 32px;
+        line-height: 150%;
+    }
+    @include resp ($md) {
+        font-size: 22px;
+        line-height: 175%;
+        // line-height: 35px;
+    }
+    @include resp ($lg) {
+        font-size: 25px;
+        // line-height: 38px;
+    }
+    @include resp ($xl) {
+        font-size: 28px;
+        // line-height: 40px;
+    }
+    @include resp ($xxl) {
+        font-size: 31px;
+    }
+    @include resp ($mxl) {
+        font-size: 35px;
+        
+    }
+}
+
 // header customization
 header {
+    // position: absolute;
+    // left: 0px;
+    // top: 0px;
+    // width: 100vw;
+    @include resp($lg) {
+        height: 15vh;
+    }
     .container {
         // brand
+        margin-top: 0px;
+        margin-bottom: 0px;
         .brand {
             #brand__svg {
-                width: 50px;
+                width: 75px;
                 @include resp($lg) {
-                    width: 75px;
+                    width: 90px;
+                }
+                @include resp($xl) {
+                    font-size: 100px;
+                }
+                @include resp($xxl) {
+                    font-size: 115px;
                 }
             }
         }
@@ -43,6 +130,12 @@ header {
                 // responsive
                 @include resp($lg) {
                     font-size: 1rem;
+                }
+                @include resp($xl) {
+                    font-size: 1.25rem;
+                }
+                @include resp($xxl) {
+                    font-size: 1.5rem;
                 }
                 .text-danger,
                 .text-white {
@@ -58,34 +151,211 @@ header {
 
 // main section wrapper ------------
 #main__wrapper {
+    // featuered images
+    #feature__image {
+        width: 90%;
+        // max-width: 300px;
+        position: absolute;
+        left: 0px;
+        top: 150px;
+        z-index: 100;
+        @include resp($sm) {
+            width: 75%;
+            max-width: initial;
+        }
+        @include resp($md) {
+            width: 65%;
+        }
+        @include resp($xl) {
+            width: 58%;
+        }
+        @include resp($xxl) {
+            max-width: 1100px;
+        }
+    }
 }
 
-// main section
+// main section ----------- >
 #main {
-    .texts {
-        // margin-top: 45px;
-        h1 {
-            font-family: Montserrat-Black;
-            font-style: normal;
-            font-size: calc(28px + (45 - 28) * ((100vw - 300px) / (600 - 300)));
-            line-height: 100%;
-            // first child
-            &:first-child {
-                transform: translateX(-8%);
-            }
-            // last child
-            &:last-child {
-                transform: translateX(8%);
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    z-index: 500;
+    .container {
+        height: 100%;
+        margin-top: 10vh;
+        @include resp($xxl) {
+            height: 77vh;
+        }
+    }
+    // top header texts
+    .top__header {
+        .texts {
+            // margin-top: 45px;
+            h1 {
+                font-family: Montserrat-Black;
+                font-style: normal;
+                font-size: calc(
+                    28px + (140 - 28) * ((100vw - 300px) / (1400 - 300))
+                );
+                @include resp($xxl) {
+                    font-size: 140px;
+                }
+                line-height: 100%;
+                // first child
+                &:first-child {
+                    transform: translateX(-8%);
+                }
+                // last child
+                &:last-child {
+                    transform: translateX(8%);
+                }
             }
         }
     }
-    // images
+
+    // small images
     .images {
         margin-top: 80px;
         text-align: right;
         img {
-            width: 40px;
+            width: calc(40px + (150 - 40) * ((100vw - 300px) / (1800 - 300)));
             transform: translateX(-8vw);
+        }
+    }
+    // bottom text section
+    .bottom__texts {
+        h6 {
+            font-weight: 400;
+            font-size: calc(
+                12px + (26 - 12) * ((100vw - 300px) / (1800 - 300))
+            );
+            .bold {
+                font-weight: 800;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background-color: blue;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+
+// serious seeds
+#serious__seeds {
+    margin-top: 110px;
+    @include resp($md) {
+        margin-top: 150px;
+    }
+    // texts
+    .texts {
+        h2 {
+            text-align: center;
+            line-height: 90%;
+            // font-size: calc(
+            //     24px + (26 - 24) * ((100vw - 300px) / (1800 - 300))
+            // );
+            @include resp($md) {
+                text-align: left !important;
+                &:last-child {
+                    transform: translateX(15%);
+                }
+            }
+        }
+    }
+}
+// who are section 
+#who__we__are {
+    .container {
+        .col-12 {
+            // image 
+            img {
+                width: 120px;
+                @include resp (400px) {
+                    width: 150px;
+                }
+                @include resp ($sm) {
+                    width: 175px;
+                }
+                @include resp($md) {
+                    width: 190px;
+                }
+                @include resp($lg) {
+                    width: 280px;
+                }
+                @include resp($xl) {
+                    width: 310px;
+                }
+                @include resp ($xxl) {
+                    width: 330px;
+                }
+            }
+            // heading 
+            h2 {
+                @include resp ($lg) {
+                    text-align: left!important;
+                }
+            }
+            // paragraph 
+            p.para {
+                @include resp($lg) {
+                    text-align: left!important;
+                    font-size: 33px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+// some tittle here section 
+#some__tittle__here {
+    .container {
+        .list__item {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 50px;
+            @include resp ($lg) {
+                margin-top: 65px;
+            }
+            li {
+                // images 
+                .img {
+                    img {
+                        border-radius: 50%;
+                        width: 135px;
+                        @include resp ($lg) {
+                            width: 160px;
+                        }
+                        @include resp ($xl) {
+                            width: 185px;
+                        }
+                    }
+                }
+                // paragraph section 
+                p.para {
+                    // max-width: 370px;
+                    @include resp ($md) {
+                        text-align: left!important;
+                    }
+                    @include resp ($lg) {
+                        margin-left: 55px!important;
+                    }
+                    @include resp ($xl) {
+                        margin-left: 65px!important;
+                    }
+                    @include resp ($xxl) {
+                        margin-left: 75px!important;
+                    }
+                }
+            }
         }
     }
 }

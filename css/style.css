@@ -1,17 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap");
 @font-face {
   font-family: "Montserrat-Black";
   src: url("../fonts/Montserrat/Montserrat-Black.ttf");
 }
 body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 400px) {
+  .container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .container {
+    padding-top: 185px;
+    padding-bottom: 180px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+body {
   background-color: #00060d;
 }
 
+h2.tittle {
+  font-weight: 800;
+  font-size: calc(22px + (85 - 22) * ((100vw - 300px) / (1600 - 300)));
+  position: relative;
+  z-index: 1000;
+}
+@media only screen and (min-width: 1400px) {
+  h2.tittle {
+    font-size: 85px;
+  }
+}
+
+p.para {
+  font-weight: 400;
+  position: relative;
+  z-index: 1000;
+  font-size: 18px;
+  max-width: 420px;
+}
+@media only screen and (min-width: 576px) {
+  p.para {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  p.para {
+    font-size: 22px;
+    line-height: 175%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  p.para {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  p.para {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  p.para {
+    font-size: 31px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  p.para {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    height: 15vh;
+  }
+}
+header .container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 header .container .brand #brand__svg {
-  width: 50px;
+  width: 75px;
 }
 @media only screen and (min-width: 992px) {
   header .container .brand #brand__svg {
-    width: 75px;
+    width: 90px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header .container .brand #brand__svg {
+    font-size: 100px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  header .container .brand #brand__svg {
+    font-size: 115px;
   }
 }
 header .container .texts h6 {
@@ -23,6 +146,16 @@ header .container .texts h6 {
     font-size: 1rem;
   }
 }
+@media only screen and (min-width: 1200px) {
+  header .container .texts h6 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  header .container .texts h6 {
+    font-size: 1.5rem;
+  }
+}
 header .container .texts h6 .text-danger,
 header .container .texts h6 .text-white {
   font-weight: 700;
@@ -31,16 +164,65 @@ header .container .texts h6 .text-ash {
   color: #9c9c9c;
 }
 
-#main .texts h1 {
+#main__wrapper #feature__image {
+  width: 90%;
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  z-index: 100;
+}
+@media only screen and (min-width: 576px) {
+  #main__wrapper #feature__image {
+    width: 75%;
+    max-width: initial;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #main__wrapper #feature__image {
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #main__wrapper #feature__image {
+    width: 58%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #main__wrapper #feature__image {
+    max-width: 1100px;
+  }
+}
+
+#main {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  z-index: 500;
+}
+#main .container {
+  height: 100%;
+  margin-top: 10vh;
+}
+@media only screen and (min-width: 1400px) {
+  #main .container {
+    height: 77vh;
+  }
+}
+#main .top__header .texts h1 {
   font-family: Montserrat-Black;
   font-style: normal;
-  font-size: calc(28px + (45 - 28) * ((100vw - 300px) / (600 - 300)));
+  font-size: calc( 28px + (140 - 28) * ((100vw - 300px) / (1400 - 300)) );
   line-height: 100%;
 }
-#main .texts h1:first-child {
+@media only screen and (min-width: 1400px) {
+  #main .top__header .texts h1 {
+    font-size: 140px;
+  }
+}
+#main .top__header .texts h1:first-child {
   transform: translateX(-8%);
 }
-#main .texts h1:last-child {
+#main .top__header .texts h1:last-child {
   transform: translateX(8%);
 }
 #main .images {
@@ -48,8 +230,138 @@ header .container .texts h6 .text-ash {
   text-align: right;
 }
 #main .images img {
-  width: 40px;
+  width: calc(40px + (150 - 40) * ((100vw - 300px) / (1800 - 300)));
   transform: translateX(-8vw);
+}
+#main .bottom__texts h6 {
+  font-weight: 400;
+  font-size: calc( 12px + (26 - 12) * ((100vw - 300px) / (1800 - 300)) );
+}
+#main .bottom__texts h6 .bold {
+  font-weight: 800;
+  position: relative;
+}
+#main .bottom__texts h6 .bold::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+}
+
+#serious__seeds {
+  margin-top: 110px;
+}
+@media only screen and (min-width: 768px) {
+  #serious__seeds {
+    margin-top: 150px;
+  }
+}
+#serious__seeds .texts h2 {
+  text-align: center;
+  line-height: 90%;
+}
+@media only screen and (min-width: 768px) {
+  #serious__seeds .texts h2 {
+    text-align: left !important;
+  }
+  #serious__seeds .texts h2:last-child {
+    transform: translateX(15%);
+  }
+}
+
+#who__we__are .container .col-12 img {
+  width: 120px;
+}
+@media only screen and (min-width: 400px) {
+  #who__we__are .container .col-12 img {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  #who__we__are .container .col-12 img {
+    width: 175px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #who__we__are .container .col-12 img {
+    width: 190px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #who__we__are .container .col-12 img {
+    width: 280px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #who__we__are .container .col-12 img {
+    width: 310px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #who__we__are .container .col-12 img {
+    width: 330px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #who__we__are .container .col-12 h2 {
+    text-align: left !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #who__we__are .container .col-12 p.para {
+    text-align: left !important;
+    font-size: 33px;
+    margin-top: 30px;
+  }
+}
+
+#some__tittle__here .container .list__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 992px) {
+  #some__tittle__here .container .list__item {
+    margin-top: 65px;
+  }
+}
+#some__tittle__here .container .list__item li .img img {
+  border-radius: 50%;
+  width: 135px;
+}
+@media only screen and (min-width: 992px) {
+  #some__tittle__here .container .list__item li .img img {
+    width: 160px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #some__tittle__here .container .list__item li .img img {
+    width: 185px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #some__tittle__here .container .list__item li p.para {
+    text-align: left !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #some__tittle__here .container .list__item li p.para {
+    margin-left: 55px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #some__tittle__here .container .list__item li p.para {
+    margin-left: 65px !important;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #some__tittle__here .container .list__item li p.para {
+    margin-left: 75px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
