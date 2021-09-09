@@ -320,9 +320,22 @@ header .container .texts h6 .text-ash {
   }
 }
 
-@media screen and (max-width: 500px) {
+#some__tittle__here .container {
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 992px) {
   #some__tittle__here .container {
-    padding-bottom: 35px;
+    padding-bottom: 85px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #some__tittle__here .container {
+    padding-bottom: 125px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #some__tittle__here .container {
+    padding-bottom: 150px;
   }
 }
 #some__tittle__here .container .list__item {
@@ -381,7 +394,29 @@ header .container .texts h6 .text-ash {
 
 #main__slider .container {
   padding-top: 35px;
-  padding-bottom: 35px;
+}
+#main__slider .splide {
+  margin-top: 35px;
+}
+@media only screen and (min-width: 576px) {
+  #main__slider .splide {
+    margin-top: 45px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #main__slider .splide {
+    margin-top: 60px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #main__slider .splide {
+    margin-top: 85px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #main__slider .splide {
+    margin-top: 100px;
+  }
 }
 #main__slider .splide .splide__list {
   display: flex;

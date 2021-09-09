@@ -318,8 +318,15 @@ header {
 // some tittle here section
 #some__tittle__here {
     .container {
-        @media screen and (max-width: 500px) {
-            padding-bottom: 35px;
+        padding-bottom: 40px;
+        @include resp($lg) {
+            padding-bottom: 85px;
+        }
+        @include resp($xl) {
+            padding-bottom: 125px;
+        }
+        @include resp($xxl) {
+            padding-bottom: 150px;
         }
         .list__item {
             list-style: none;
@@ -372,9 +379,22 @@ header {
 #main__slider {
     .container {
         padding-top: 35px;
-        padding-bottom: 35px;
+        // padding-bottom: 35px;
     }
     .splide {
+        margin-top: 35px;
+        @include resp ($sm) {
+            margin-top: 45px;
+        }
+        @include resp($md) {
+            margin-top: 60px;
+        }
+        @include resp ($lg) {
+            margin-top: 85px;
+        }
+        @include resp ($xl) {
+            margin-top: 100px;
+        }
         .splide__list {
             display: flex;
             justify-content: space-between;
