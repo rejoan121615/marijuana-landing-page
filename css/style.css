@@ -319,6 +319,11 @@ header .container .texts h6 .text-ash {
   }
 }
 
+@media screen and (max-width: 500px) {
+  #some__tittle__here .container {
+    padding-bottom: 35px;
+  }
+}
 #some__tittle__here .container .list__item {
   list-style: none;
   margin: 0;
@@ -371,6 +376,10 @@ header .container .texts h6 .text-ash {
   #some__tittle__here .container .list__item li p.para {
     margin-left: 75px !important;
   }
+}
+
+.middle__flower {
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */
