@@ -102,9 +102,6 @@ header {
     // left: 0px;
     // top: 0px;
     // width: 100vw;
-    @include resp($lg) {
-        height: 15vh;
-    }
     .container {
         // brand
         padding-top: 20px !important;
@@ -125,9 +122,14 @@ header {
         }
         // text column
         .texts {
+            margin-top: 10px;
+            @include resp($sm) {
+                margin-top: 0px;
+            }
             h6 {
                 font-size: 0.8rem;
                 font-weight: 400;
+                line-height: 150%;
                 // responsive
                 @include resp($lg) {
                     font-size: 1rem;
@@ -169,6 +171,7 @@ header {
         }
         @include resp($xl) {
             width: 58%;
+            top: 280px;
         }
         @include resp($xxl) {
             max-width: 1100px;
@@ -179,15 +182,10 @@ header {
 // main section ----------- >
 #main {
     width: 100%;
-    height: 85vh;
     position: relative;
     z-index: 500;
     .container {
         height: 100%;
-        margin-top: 10vh;
-        @include resp($xxl) {
-            height: 77vh;
-        }
     }
     // top header texts
     .top__header {
@@ -200,7 +198,7 @@ header {
                     28px + (140 - 28) * ((100vw - 300px) / (1400 - 300))
                 );
                 @include resp($xxl) {
-                    font-size: 140px;
+                    font-size: 120px;
                 }
                 line-height: 100%;
                 // first child
@@ -231,6 +229,11 @@ header {
             font-size: calc(
                 12px + (26 - 12) * ((100vw - 300px) / (1800 - 300))
             );
+            max-width: 250px;
+            line-height: 160%;
+            @media screen and (min-width: 420px) {
+                max-width: initial;
+            }
             .bold {
                 font-weight: 800;
                 position: relative;
@@ -250,9 +253,15 @@ header {
 
 // serious seeds
 #serious__seeds {
-    margin-top: 110px;
-    @include resp($md) {
-        margin-top: 150px;
+    .container {
+        padding-top: 100px;
+        padding-bottom: 0px;
+        @include resp (450px) {
+            padding-top: 125px;
+        }
+        @include resp ($xl) {
+            padding-bottom: 55px;
+        }
     }
     // texts
     .texts {
@@ -273,7 +282,14 @@ header {
 }
 // who are section
 #who__we__are {
+    position: relative;
+    z-index: 1000;
     .container {
+        padding-top: 100px;
+        padding-bottom: 0px;
+        @include resp($sm) {
+            padding-top: 180px;
+        }
         .col-12 {
             // image
             img {
@@ -500,6 +516,12 @@ header {
 #brand__logo {
     .container {
         padding-top: 0px;
+        @include resp ($xl) {
+            padding-top: 35px;
+        }
+        @include resp ($xxl) {
+            padding-top: 50px;
+        }
         // top section 
         .brand {
             // svg wrapper 
@@ -541,6 +563,12 @@ header {
             @include resp ($xl) {
                 margin-top: 70px!important;
             }
+            @include resp($xxl) {
+                margin-top: 100px!important;
+            }
+            @include resp ($mxl) {
+                margin-top: 140px!important;
+            }
             .item {
                 background-color: #000C1B;
                 max-width: 320px;
@@ -555,6 +583,9 @@ header {
                 @include resp ($xl) {
                     padding-top: 45px!important;
                     padding-bottom: 45px!important;
+                }
+                @include resp ($xxl) {
+                    margin-bottom: 70px!important;
                 }
                 img {
                     width: 110px;

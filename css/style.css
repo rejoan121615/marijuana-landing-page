@@ -112,11 +112,6 @@ p.para {
   }
 }
 
-@media only screen and (min-width: 992px) {
-  header {
-    height: 15vh;
-  }
-}
 header .container {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
@@ -139,9 +134,18 @@ header .container .brand #brand__svg {
     font-size: 115px;
   }
 }
+header .container .texts {
+  margin-top: 10px;
+}
+@media only screen and (min-width: 576px) {
+  header .container .texts {
+    margin-top: 0px;
+  }
+}
 header .container .texts h6 {
   font-size: 0.8rem;
   font-weight: 400;
+  line-height: 150%;
 }
 @media only screen and (min-width: 992px) {
   header .container .texts h6 {
@@ -187,6 +191,7 @@ header .container .texts h6 .text-ash {
 @media only screen and (min-width: 1200px) {
   #main__wrapper #feature__image {
     width: 58%;
+    top: 280px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -197,18 +202,11 @@ header .container .texts h6 .text-ash {
 
 #main {
   width: 100%;
-  height: 85vh;
   position: relative;
   z-index: 500;
 }
 #main .container {
   height: 100%;
-  margin-top: 10vh;
-}
-@media only screen and (min-width: 1400px) {
-  #main .container {
-    height: 77vh;
-  }
 }
 #main .top__header .texts h1 {
   font-family: Montserrat-Black;
@@ -218,7 +216,7 @@ header .container .texts h6 .text-ash {
 }
 @media only screen and (min-width: 1400px) {
   #main .top__header .texts h1 {
-    font-size: 140px;
+    font-size: 120px;
   }
 }
 #main .top__header .texts h1:first-child {
@@ -238,6 +236,13 @@ header .container .texts h6 .text-ash {
 #main .bottom__texts h6 {
   font-weight: 400;
   font-size: calc( 12px + (26 - 12) * ((100vw - 300px) / (1800 - 300)) );
+  max-width: 250px;
+  line-height: 160%;
+}
+@media screen and (min-width: 420px) {
+  #main .bottom__texts h6 {
+    max-width: initial;
+  }
 }
 #main .bottom__texts h6 .bold {
   font-weight: 800;
@@ -253,12 +258,18 @@ header .container .texts h6 .text-ash {
   left: 0px;
 }
 
-#serious__seeds {
-  margin-top: 110px;
+#serious__seeds .container {
+  padding-top: 100px;
+  padding-bottom: 0px;
 }
-@media only screen and (min-width: 768px) {
-  #serious__seeds {
-    margin-top: 150px;
+@media only screen and (min-width: 450px) {
+  #serious__seeds .container {
+    padding-top: 125px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #serious__seeds .container {
+    padding-bottom: 55px;
   }
 }
 #serious__seeds .texts h2 {
@@ -274,6 +285,19 @@ header .container .texts h6 .text-ash {
   }
 }
 
+#who__we__are {
+  position: relative;
+  z-index: 1000;
+}
+#who__we__are .container {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+@media only screen and (min-width: 576px) {
+  #who__we__are .container {
+    padding-top: 180px;
+  }
+}
 #who__we__are .container .col-12 img {
   width: 120px;
 }
@@ -535,6 +559,16 @@ header .container .texts h6 .text-ash {
 #brand__logo .container {
   padding-top: 0px;
 }
+@media only screen and (min-width: 1200px) {
+  #brand__logo .container {
+    padding-top: 35px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #brand__logo .container {
+    padding-top: 50px;
+  }
+}
 #brand__logo .container .brand .svg__wrapper svg {
   width: 160px;
 }
@@ -581,6 +615,16 @@ header .container .texts h6 .text-ash {
     margin-top: 70px !important;
   }
 }
+@media only screen and (min-width: 1400px) {
+  #brand__logo .container .list__items {
+    margin-top: 100px !important;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  #brand__logo .container .list__items {
+    margin-top: 140px !important;
+  }
+}
 #brand__logo .container .list__items .item {
   background-color: #000C1B;
   max-width: 320px;
@@ -601,6 +645,11 @@ header .container .texts h6 .text-ash {
   #brand__logo .container .list__items .item {
     padding-top: 45px !important;
     padding-bottom: 45px !important;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #brand__logo .container .list__items .item {
+    margin-bottom: 70px !important;
   }
 }
 #brand__logo .container .list__items .item img {
