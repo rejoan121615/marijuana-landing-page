@@ -571,5 +571,61 @@ header .container .texts h6 .text-ash {
 #brand__logo .container .brand .text__wrap p.para {
   max-width: initial;
 }
+@media only screen and (min-width: 992px) {
+  #brand__logo .container .list__items {
+    margin-top: 50px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #brand__logo .container .list__items {
+    margin-top: 70px !important;
+  }
+}
+#brand__logo .container .list__items .item {
+  background-color: #000C1B;
+  max-width: 320px;
+}
+@media only screen and (min-width: 576px) {
+  #brand__logo .container .list__items .item {
+    max-width: 410px;
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #brand__logo .container .list__items .item {
+    max-width: initial;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #brand__logo .container .list__items .item {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+}
+#brand__logo .container .list__items .item img {
+  width: 110px;
+}
+@media only screen and (min-width: 992px) {
+  #brand__logo .container .list__items .item img {
+    width: 150px;
+  }
+}
+#brand__logo .container .list__items .item .para {
+  max-width: 305px;
+}
+@media only screen and (min-width: 768px) {
+  #brand__logo .container .list__items .item .para {
+    font-size: 20px !important;
+    text-align: left !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #brand__logo .container .list__items .item .para {
+    text-align: center !important;
+    font-size: 25px !important;
+    max-width: 380px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

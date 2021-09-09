@@ -500,6 +500,7 @@ header {
 #brand__logo {
     .container {
         padding-top: 0px;
+        // top section 
         .brand {
             // svg wrapper 
             .svg__wrapper {
@@ -530,6 +531,52 @@ header {
                 p.para {
                     max-width: initial;
                 }
+            }
+        }
+        // bottom list section 
+        .list__items {
+            @include resp($lg) {
+                margin-top: 50px!important;
+            }
+            @include resp ($xl) {
+                margin-top: 70px!important;
+            }
+            .item {
+                background-color: #000C1B;
+                max-width: 320px;
+                @include resp ($sm) {
+                    max-width: 410px;
+                    padding-top: 35px!important;
+                    padding-bottom: 35px!important;
+                }
+                @include resp ($md) {
+                    max-width: initial;
+                }
+                @include resp ($xl) {
+                    padding-top: 45px!important;
+                    padding-bottom: 45px!important;
+                }
+                img {
+                    width: 110px;
+                    @include resp ($lg) {
+                        width: 150px;
+                    }
+                }
+                .para {
+                    max-width: 305px;
+                    @include resp ($md) {
+                        font-size: 20px!important;
+                        text-align: left!important;
+                        // line-height: 0px;
+                    }
+                    @include resp ($lg) {
+                        text-align: center!important;
+                        font-size: 25px!important;
+                        max-width: 380px;
+                    }
+
+                }
+
             }
         }
     }
