@@ -58,8 +58,8 @@ h2.tittle {
     font-size: calc(22px + (85 - 22) * ((100vw - 300px) / (1600 - 300)));
     position: relative;
     z-index: 1000;
-    @include resp($xxl) {
-        font-size: 85px;
+    @include resp($xl) {
+        font-size: 70px;
     }
 }
 
@@ -102,6 +102,9 @@ header {
     // left: 0px;
     // top: 0px;
     // width: 100vw;
+    @include resp (1024px) {
+        height: 19vh;
+    }
     .container {
         // brand
         padding-top: 20px !important;
@@ -184,30 +187,54 @@ header {
     width: 100%;
     position: relative;
     z-index: 500;
+    @include resp (1024px) {
+        height: 81vh;
+    }
     .container {
         height: 100%;
+        padding-top: 90px;
+        @include resp (1024px) {
+            padding: 0px;
+        }
     }
     // top header texts
     .top__header {
+        margin-top: 85px;
+        @include resp ($xxl) {
+            margin-top: 105px;
+        }
+        @include resp ($mxl) {
+            margin-top: 120px;
+        }
         .texts {
             // margin-top: 45px;
             h1 {
                 font-family: Montserrat-Black;
                 font-style: normal;
-                font-size: calc(
-                    28px + (140 - 28) * ((100vw - 300px) / (1400 - 300))
-                );
-                @include resp($xxl) {
-                    font-size: 120px;
-                }
+                font-size: 32px;
                 line-height: 100%;
-                // first child
-                &:first-child {
-                    transform: translateX(-8%);
+                @media screen and (min-width: 420px) {
+                    font-size: 37px;
                 }
-                // last child
-                &:last-child {
-                    transform: translateX(8%);
+                @include resp ($sm) {
+                    font-size: 45px;
+                    line-height: 125%;
+                }
+                @include resp ($md) {
+                    font-size: 60px;
+                }
+                @include resp (1024px) {
+                    font-size: 75px;
+                }
+                @include resp ($xl) {
+                    font-size: 90px;
+                    line-height: 120%;
+                }
+                @include resp ($xxl) {
+                    font-size: 105px;
+                }
+                @include resp ($mxl) {
+                    font-size: 120px;
                 }
             }
         }
@@ -217,6 +244,9 @@ header {
     .images {
         margin-top: 80px;
         text-align: right;
+        @include resp (1024px) {
+            margin-top: 0px;
+        }
         img {
             width: calc(40px + (150 - 40) * ((100vw - 300px) / (1800 - 300)));
             transform: translateX(-8vw);
@@ -254,13 +284,22 @@ header {
 // serious seeds
 #serious__seeds {
     .container {
-        padding-top: 100px;
+        padding-top: 45px;
         padding-bottom: 0px;
         @include resp (450px) {
-            padding-top: 125px;
+            padding-top: 100px;
         }
         @include resp ($xl) {
             padding-bottom: 55px;
+        }
+        @include resp ($lg) {
+            padding-top: 200px;
+        }
+        @include resp ($xxl) {
+            padding-top: 235px;
+        }
+        @include resp ($mxl) {
+            padding-top: 280px;
         }
     }
     // texts
@@ -268,14 +307,8 @@ header {
         h2 {
             text-align: center;
             line-height: 90%;
-            // font-size: calc(
-            //     24px + (26 - 24) * ((100vw - 300px) / (1800 - 300))
-            // );
-            @include resp($md) {
-                text-align: left !important;
-                &:last-child {
-                    transform: translateX(15%);
-                }
+            @include resp ($xxl) {
+                line-height: 120%;
             }
         }
     }
@@ -290,27 +323,27 @@ header {
         @include resp($sm) {
             padding-top: 180px;
         }
+        @include resp ($lg) {
+            padding-top: 230px;
+        }
         .col-12 {
             // image
             img {
                 width: 120px;
                 @include resp(400px) {
-                    width: 150px;
+                    width: 120px;
                 }
                 @include resp($sm) {
-                    width: 175px;
+                    width: 135px;
                 }
                 @include resp($md) {
                     width: 190px;
                 }
                 @include resp($lg) {
-                    width: 280px;
+                    width: 240px;
                 }
                 @include resp($xl) {
-                    width: 310px;
-                }
-                @include resp($xxl) {
-                    width: 330px;
+                    width: 270px;
                 }
             }
             // heading
@@ -339,7 +372,8 @@ header {
             padding-bottom: 85px;
         }
         @include resp($xl) {
-            padding-bottom: 125px;
+            padding-bottom: 150px;
+            padding-top: 230px;
         }
         @include resp($xxl) {
             padding-bottom: 150px;
