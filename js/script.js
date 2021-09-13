@@ -1,4 +1,4 @@
-// slider 
+// slider
 
 document.addEventListener("DOMContentLoaded", function () {
     new Splide(".splide", {
@@ -8,29 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
         autoWidth: false,
     }).mount();
 });
-// gsap plugins 
+// gsap plugins
 gsap.registerPlugin(ScrollTrigger);
-// bottom texts  
+// bottom texts
 const leftText = gsap.utils.toArray("#bottom-texts #serious path");
 const rightText = gsap.utils.toArray("#bottom-texts #seeds path");
 const bottomTextGradient = gsap.utils.toArray("#bottom-texts #circle-gradient");
-// top logo 
+// top logo
 const topMainCircle = gsap.utils.toArray("#top-logo #main-circle");
 const topSeedContainer = gsap.utils.toArray("#top-logo #seedContainer");
 const topContainerSeed = gsap.utils.toArray("#top-logo #seed");
 // const topCenterCircleGradient = gsap.utils.toArray("#top-logo #inner-dot-group");
 
 gsap.set(bottomTextGradient, {
-    display: 'none'
-})
-gsap.set(
-    gsap.utils.toArray(topMainCircle, topSeedContainer),
-    {
-        transformOrigin: "center center",
-    }
-);
-
-
+    display: "none",
+});
+gsap.set(gsap.utils.toArray(topMainCircle, topSeedContainer), {
+    transformOrigin: "center center",
+});
 
 // gsap.timeline()
 //     .fromTo(
@@ -176,23 +171,232 @@ gsap.set(
 //             duration: 0.8
 //         });
 
-// scroll trigger 
+// scroll trigger
 gsap.timeline({
     scrollTrigger: {
         trigger: "#serious__seeds",
-        markers: true,
-        start: '50% 80%',
+        start: "50% 80%",
         end: "end 30%",
-        scrub: 1
     },
-}).fromTo("#serious__seeds .tittle", {
-    opacity: 0,
-    y: 100
-}, {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    stagger: {
-        each: 1
+}).fromTo(
+    "#serious__seeds .tittle",
+    {
+        opacity: 0,
+        y: 100,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: {
+            each: 1,
+        },
     }
+);
+
+// who we are
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#who__we__are",
+        start: "0% 50%",
+        end: "bottom 50%",
+    },
+})
+    .fromTo(
+        "#who__we__are .tittle",
+        {
+            opacity: 0,
+            y: 200,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: {
+                each: 1,
+            },
+        }
+    )
+    .fromTo(
+        "#who__we__are .para",
+        {
+            opacity: 0,
+            y: 200,
+        },
+        {
+            opacity: 1,
+            y: 0,
+        },
+        "<"
+    )
+    .fromTo(
+        "#who__we__are .right__img",
+        {
+            opacity: 0,
+            y: 200,
+            x: 200,
+        },
+        {
+            opacity: 1,
+            x: 0,
+            y: 0,
+        },
+        "<"
+    );
+
+// some tittle here
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#some__tittle__here",
+        start: "0% 50%",
+        end: "bottom 50%",
+    },
+}).fromTo(
+    "#some__tittle__here .main__tittle",
+    {
+        opacity: 0,
+        y: 200,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: {
+            each: 1,
+        },
+    }
+);
+
+// some tittle here list
+gsap.utils
+    .toArray("#some__tittle__here .list__item li")
+    .forEach((item, index) => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+                start: "center 70%",
+            },
+        }).fromTo(
+            item,
+            {
+                y: 100,
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+            }
+        );
+    });
+
+// middle flower
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#main__slider",
+        start: "top center",
+    },
+})
+    .fromTo(
+        "#main__slider .texts .tittle",
+        {
+            y: 100,
+            opacity: 0,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+        }
+    )
+    .fromTo(
+        "#main__slider .splide",
+        {
+            y: 100,
+            opacity: 0,
+        },
+        {
+            y: 0,
+            opacity: 1,
+        }
+    );
+
+// option brand logo
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#brand__logo",
+        start: "top center",
+    },
+})
+    .fromTo(
+        "#brand__logo .svg__wrapper",
+        {
+            scale: 0,
+            rotate: 150,
+        },
+        {
+            scale: 1,
+            rotate: 0,
+        }
+    )
+    .fromTo(
+        "#brand__logo .text__wrap .para",
+        {
+            y: 100,
+            opacity: 0,
+        },
+        {
+            y: 0,
+            opacity: 1,
+            stagger: {
+                each: 0.5,
+            },
+        },
+        "<"
+    );
+
+// item lists
+gsap.utils.toArray("#brand__logo .list__items .list").forEach((item, index) => {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: item,
+            start: "top 70%",
+        },
+    })
+        .fromTo(
+            item,
+            {
+                opacity: 0,
+                y: 100,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                stagger: {
+                    each: 0.5,
+                },
+            }
+        )
+        .fromTo(
+            item.querySelector("img"),
+            {
+                opacity: 0,
+                y: 100,
+            },
+            {
+                opacity: 1,
+                y: 0,
+            }
+        )
+        .fromTo(
+            item.querySelector(".para"),
+            {
+                opacity: 0,
+                y: 100,
+            },
+            {
+                opacity: 1,
+                y: 0,
+            }
+        )
 });
