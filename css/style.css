@@ -754,7 +754,7 @@ header .container .texts h6 .text-ash {
 #animation__wrap {
   width: 100%;
   height: 100vh;
-  position: sticky;
+  position: absolute;
   left: 0px;
   top: 0px;
   background-color: black;
