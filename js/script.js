@@ -41,6 +41,11 @@ gsap.timeline()
             stagger: {
                 amount: 2,
             },
+            // onStart: function () {
+            //     gsap.set("body", {
+            //         overflow: 'hidden'
+            //     })
+            // }
         }
     )
     .fromTo(
@@ -81,6 +86,123 @@ gsap.timeline()
             stroke: "#000000",
             duration: 1.8,
         }
+    )
+    .fromTo(
+        topContainerSeed[1],
+        {
+            x: -500,
+            fill: "#FFFFFF",
+            stroke: "#FFFFFF",
+        },
+        {
+            x: 0,
+            fill: "#000000",
+            stroke: "#000000",
+            duration: 1.8,
+        },
+        "<"
+    )
+    .fromTo(
+        topContainerSeed[2],
+        {
+            x: -500,
+            y: 500,
+            fill: "#FFFFFF",
+            stroke: "#FFFFFF",
+        },
+        {
+            x: 0,
+            y: 0,
+            fill: "#000000",
+            stroke: "#000000",
+            duration: 1.8,
+        },
+        "<"
+    )
+    .to("#animation__wrap", {
+        height: "0",
+        duration: 2,
+    })
+    .set("#animation__wrap", {
+        display: 'none',
+        // onComplete: function () {
+        //     gsap.set('body', {
+        //         overflowY: 'scroll'
+        //     })
+        // }
+    })
+    .fromTo(
+            "#top__text",
+            {
+                opacity: 0,
+                y: 50,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+            }
+        )
+        .fromTo(
+            ".brand #brand__svg",
+            {
+                opacity: 0,
+                x: 50,
+                y: 50,
+            },
+            {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 1,
+            },
+            "<"
+        )
+        .fromTo(
+            "#highlightText h1",
+            {
+                y: 100,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: {
+                    each: 0.5,
+                },
+                duration: 1
+            }
+        )
+        .fromTo(".bottom__texts", {
+            y: 50,
+            opacity: 0,
+        }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.8
+        });
+
+// scroll trigger
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#serious__seeds",
+        start: "0% 50%",
+        markers: true
+    },
+}).fromTo(
+    "#serious__seeds .tittle",
+    {
+        opacity: 0,
+        y: 100,
+    },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: {
+            each: 1,
+        }
+    }
     )
     .fromTo(
         topContainerSeed[1],
@@ -198,8 +320,7 @@ gsap.timeline()
 gsap.timeline({
     scrollTrigger: {
         trigger: "#who__we__are",
-        start: "0% 50%",
-        end: "bottom 50%",
+        start: "center center",
     },
 })
     .fromTo(
@@ -244,12 +365,11 @@ gsap.timeline({
         "<"
     );
 
-// some tittle here
+// // some tittle here
 gsap.timeline({
     scrollTrigger: {
         trigger: "#some__tittle__here",
-        start: "0% 50%",
-        end: "bottom 50%",
+        start: "0% 80%",
     },
 }).fromTo(
     "#some__tittle__here .main__tittle",
@@ -267,14 +387,14 @@ gsap.timeline({
     }
 );
 
-// some tittle here list
+// // some tittle here list
 gsap.utils
     .toArray("#some__tittle__here .list__item li")
     .forEach((item, index) => {
         gsap.timeline({
             scrollTrigger: {
                 trigger: item,
-                start: "center 70%",
+                start: "0% 80%",
             },
         }).fromTo(
             item,
@@ -290,7 +410,7 @@ gsap.utils
         );
     });
 
-// middle flower
+// slider section
 gsap.timeline({
     scrollTrigger: {
         trigger: "#main__slider",
@@ -321,11 +441,11 @@ gsap.timeline({
         }
     );
 
-// option brand logo
+// // option brand logo
 gsap.timeline({
     scrollTrigger: {
         trigger: "#brand__logo",
-        start: "top center",
+        start: "0% 80%",
     },
 })
     .fromTo(
@@ -355,12 +475,12 @@ gsap.timeline({
         "<"
     );
 
-// item lists
+// // item lists
 gsap.utils.toArray("#brand__logo .list__items .list").forEach((item, index) => {
     gsap.timeline({
         scrollTrigger: {
             trigger: item,
-            start: "top 70%",
+            start: "0% 80%",
         },
     })
         .fromTo(

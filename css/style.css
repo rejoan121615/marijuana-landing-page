@@ -778,8 +778,12 @@ header .container .texts h6 .text-ash {
 #animation__wrap {
   width: 100%;
   height: 100vh;
+<<<<<<< HEAD
   position: -webkit-sticky;
   position: sticky;
+=======
+  position: absolute;
+>>>>>>> newAnimation
   left: 0px;
   top: 0px;
   background-color: black;
