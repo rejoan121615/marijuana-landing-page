@@ -699,9 +699,19 @@ header {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
-            #main__animated__svg {
+            svg {
                 width: 100%;
+                max-width: 900px;
             }
         }
     }
 }
+
+// animation css 
+#top-logo {
+    #main-circle {
+        fill: transparent;
+        stroke: white;
+    }
+}
+

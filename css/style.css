@@ -778,12 +778,7 @@ header .container .texts h6 .text-ash {
 #animation__wrap {
   width: 100%;
   height: 100vh;
-<<<<<<< HEAD
-  position: -webkit-sticky;
-  position: sticky;
-=======
   position: absolute;
->>>>>>> newAnimation
   left: 0px;
   top: 0px;
   background-color: black;
@@ -809,8 +804,14 @@ header .container .texts h6 .text-ash {
   -ms-flex-pack: center;
   justify-content: center;
 }
-#animation__wrap .container .svg__wrapper #main__animated__svg {
+#animation__wrap .container .svg__wrapper svg {
   width: 100%;
+  max-width: 900px;
+}
+
+#top-logo #main-circle {
+  fill: transparent;
+  stroke: white;
 }
 
 /*# sourceMappingURL=style.css.map */
