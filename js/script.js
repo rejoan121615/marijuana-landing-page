@@ -541,6 +541,7 @@ const allTexts = gsap.utils.toArray("#serious path, #seeds path");
 const innerRedContainer = gsap.utils.toArray("#seedContainer");
 const topBlackSeed = gsap.utils.toArray("#inner-dot #seed");
 const mainBigCircle = gsap.utils.toArray("#main-circle");
+const bottomGradient = gsap.utils.toArray("#circle-gradient");
 
 // inner red container
 gsap.set(innerRedContainer, {
@@ -551,6 +552,7 @@ gsap.set(topBlackSeed, {
     scale: 1.5,
     transformOrigin: "center center",
     fill: "transparent",
+    stroke: "transparent",
 });
 
 gsap.set([innerRedContainer, mainBigCircle], {
@@ -573,34 +575,58 @@ gsap.set(mainBigCircle, {
     scale: 1.08,
 });
 
-gsap.timeline().from(allTexts, {
-    drawSVG: '50% 50%',
-    delay: 2,
-    duration: 1.5,
-    stagger: {
-        each: 0.3
+// bottom text gradient animation timeline
+
+// bottom gradient animation
+gsap.timeline().fromTo(
+    bottomGradient,
+    {
+        scale: 0
     },
-})
-    .to(allTexts, {
+    {
         scale: 1,
+        duration: 1,
+        delay: 4
+    }
+);
+
+// main animation timeline
+gsap.timeline()
+    .from(allTexts, {
+        drawSVG: "50% 50%",
+        delay: 2,
         duration: 1.5,
-        delay: 0.3,
         stagger: {
             each: 0.3,
-            from: 'start'
-        }
-    }, '<')
-
-    .to(allTexts, {
-    fill: 'white',
-    duration: 1,
-    stagger: {
-        each: 0.3
-    },
-    delay: 1
-    }, '<')
+        },
+    })
+    .to(
+        allTexts,
+        {
+            scale: 1,
+            duration: 1.5,
+            delay: 0.3,
+            stagger: {
+                each: 0.3,
+                from: "start",
+            },
+        },
+        "<"
+    )
+    .to(
+        allTexts,
+        {
+            fill: "white",
+            duration: 1,
+            stagger: {
+                each: 0.3,
+            },
+            delay: 1,
+        },
+        "<"
+    )
     .from(mainBigCircle, {
-        drawSVG: "50% 50%",
+        drawSVG: "0% 0%",
         duration: 2,
     })
     .to(mainBigCircle, {
@@ -611,7 +637,7 @@ gsap.timeline().from(allTexts, {
     .from(
         innerRedContainer,
         {
-            drawSVG: "50% 50%",
+            drawSVG: "0% 0%",
             duration: 1.4,
         },
         "-=1.2"
@@ -621,22 +647,30 @@ gsap.timeline().from(allTexts, {
         { fill: "transparent", scale: 0.7 },
         { fill: "#e2001a", duration: 1.2, scale: 1 }
     )
-    .from(topBlackSeed, {
-        drawSVG: '50% 50%',
-        duration: 1.2,
-        stagger: {
-            each: 1
+
+    .fromTo(
+        topBlackSeed,
+        {
+            fill: "transparent",
+            stroke: 'transparent'
+        },
+        {
+            fill: "black",
+            stroke: 'black',
+            stagger: {
+                each: 1,
+            },
+            duration: 2,
         }
-    }).fromTo(topBlackSeed, {
-        rotate: 360,
-        fill: 'transparent',
-        scale: 1.5
-    }, {
-        rotate: 0,
-        fill: 'black',
-        scale: 1,
-        duration: 1.5,
-        stagger: {
-            each: 0.5
-        }
-    }, '-=2')
+    )
+    .to(
+        topBlackSeed,
+        {
+            scale: 1,
+            stagger: {
+                each: 1,
+            },
+            delay: 0.5,
+        },
+        "<"
+    );
