@@ -522,20 +522,24 @@
 // });
 
 // only log animation
-gsap.registerPlugin(DrawSVGPlugin);
 
 // function animatePathStroke(element) {
-//     gsap.timeline()
-//         .from(element, {
-//             drawSVG: "50% 50%",
-//             duration: 2,
-//             delay: 2,
-//         })
-//         .to(element, {
-//             fill: "white",
-//             duration: 1,
-//         });
-// }
+    //     gsap.timeline()
+    //         .from(element, {
+        //             drawSVG: "50% 50%",
+        //             duration: 2,
+        //             delay: 2,
+        //         })
+        //         .to(element, {
+            //             fill: "white",
+            //             duration: 1,
+            //         });
+            // }
+
+
+
+
+gsap.registerPlugin(DrawSVGPlugin);
 
 const allTexts = gsap.utils.toArray("#serious path, #seeds path");
 const innerRedContainer = gsap.utils.toArray("#seedContainer");
@@ -557,7 +561,9 @@ gsap.set(topBlackSeed, {
 
 gsap.set([innerRedContainer, mainBigCircle], {
     transformOrigin: "center center",
+    rotate: 180
 });
+
 
 // inner read container
 
@@ -632,35 +638,35 @@ gsap.timeline()
     .to(mainBigCircle, {
         fill: "white",
         scale: 1,
-        duration: 1.5,
+        duration: 0.75,
     })
     .from(
         innerRedContainer,
         {
             drawSVG: "0% 0%",
-            duration: 1.4,
+            duration: 0.74,
         },
         "-=1.2"
     )
     .fromTo(
         innerRedContainer,
         { fill: "transparent", scale: 0.7 },
-        { fill: "#e2001a", duration: 1.2, scale: 1 }
+        { fill: "#e2001a", duration: 0.6, scale: 1 }
     )
 
     .fromTo(
         topBlackSeed,
         {
             fill: "transparent",
-            stroke: 'transparent'
+            stroke: "transparent",
         },
         {
             fill: "black",
-            stroke: 'black',
+            stroke: "black",
             stagger: {
-                each: 1,
+                each: 0.5,
             },
-            duration: 2,
+            duration: 1,
         }
     )
     .to(
@@ -668,9 +674,10 @@ gsap.timeline()
         {
             scale: 1,
             stagger: {
-                each: 1,
+                each: 0.5,
             },
-            delay: 0.5,
+            delay: 0.25,
         },
         "<"
-    );
+    )
+
